@@ -1,0 +1,7 @@
+node_modules
+.env
+pass
+tasks
+testrun.js
+.vscode
+test/results/photos
