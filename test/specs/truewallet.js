@@ -9,12 +9,12 @@ describe.skip('MY TEST', ()=>{
     it('Test test', async () => {
         console.log('Service:')
         console.log(browser)
-
+        // options.capabilities
         // console.log(browser)
         // envVar = process.env
         console.log('executinng only test');
-        await WizardPage.open()
-        WizardPage.pause(5)
+        // await WizardPage.open()
+        // WizardPage.pause(5)
 
         // browser.url('https://google.com')
     })
@@ -33,7 +33,7 @@ describe('Wallet Test Suite', () => {
         })
 
         afterEach('Wrapping up test', async => {
-            WizardPage.getScreenShot(testDate)
+            // WizardPage.getScreenShot(testDate)
             WizardPage.pause(5)
             // console.log('Nothing to do here');
         })

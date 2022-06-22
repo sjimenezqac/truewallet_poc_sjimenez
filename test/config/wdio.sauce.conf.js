@@ -195,7 +195,13 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',
+                ['junit', {
+                    outputDir: './test/results/reports/',
+                    outputFileFormat: function(options) { // optional
+                        return `result-${new Date().getTime()}.xml`
+                    }
+                }]],
 
 
     
@@ -356,7 +362,7 @@ exports.config = {
 }
 
 function getCapabilities(browser){
-    if (['all', '%npm_config_browser%'].includes(browser)){
+    if (['all', '%npm_config_wdiobrowser%'].includes(browser)){
         return wdioCapabilities
     }
     else {
