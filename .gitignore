@@ -4,5 +4,7 @@ pass
 tasks
 testrun.js
 .vscode
-test/results/photos/*
-test/results/reports/*
+test/ui/results/photos/*
+test/ui/results/reports/*
+temp.js
+test/api/notes.md

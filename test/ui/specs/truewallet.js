@@ -51,12 +51,12 @@ describe('Wallet Test Suite', () => {
             await WizardPage.clickButton('Scan') 
 
             await WizardPage.verifyElementAndText('div','Scan barcode on the back of license.')
-            await WizardPage.uploadFile(WizardPage.inputFile, '/test/assets/license.png')
+            await WizardPage.uploadFile(WizardPage.inputFile, '/test/ui/assets/license.png')
             await WizardPage.verifyElementAndText('h4', 'Looks good!')
             await WizardPage.clickButton('Next') 
 
             await WizardPage.verifyElementAndText('p', "This photo will be used to verify it's you. Make sure to take a clear photo of your face.")
-            await WizardPage.uploadFile(WizardPage.inputFile, '/test/assets/photo.png')
+            await WizardPage.uploadFile(WizardPage.inputFile, '/test/ui/assets/photo.png')
             await WizardPage.verifyElementAndText('h4', 'Looks good!')
             await WizardPage.clickButton('Next') 
 

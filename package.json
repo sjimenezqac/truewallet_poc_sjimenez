@@ -12,19 +12,23 @@
         "@wdio/sauce-service": "^7.20.2",
         "@wdio/selenium-standalone-service": "^7.20.1",
         "@wdio/spec-reporter": "^7.20.0",
+        "chai": "^4.3.6",
         "chromedriver": "^102.0.0",
         "cross-env": "^7.0.3",
         "geckodriver": "^3.0.1",
+        "supertest": "^6.2.3",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-geckodriver-service": "^2.1.1",
-        "webdriverio": "^7.20.2"
+        "webdriverio": "^7.20.2",
+        "nyc": "^15.1.0"
     },
     "scripts": {
         "test-dev": "cross-env ENV=DEV wdio run ./config/wdio.conf.js",
         "test-stg": "cross-env ENV=STG wdio run wdio.conf.js",
         "test": "cross-env WDIO_BROWSER=%npm_config_wdiobrowser% node testrun.js",
-        "test-local": "cross-env WDIO_BROWSER=%npm_config_wdiobrowser% wdio run ./test/config/wdio.conf.js",
-        "test-sauce": "cross-env WDIO_BROWSER=%npm_config_wdiobrowser% wdio run ./test/config/wdio.sauce.conf.js"
+        "test-local": "cross-env WDIO_BROWSER=%npm_config_wdiobrowser% wdio run ./test/ui/config/wdio.conf.js",
+        "test-sauce": "cross-env WDIO_BROWSER=%npm_config_wdiobrowser% wdio run ./test/ui/config/wdio.sauce.conf.js",
+        "test-api": "mocha --recursive ./test/api/*.test.js"
     },
     "dependencies": {
         "dotenv": "^16.0.1"

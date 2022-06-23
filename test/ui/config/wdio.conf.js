@@ -56,7 +56,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/truewallet.js'
+        './test/ui/specs/truewallet.js'
         // './test/specs/**/*.js'
     ],
     // Patterns to exclude.
@@ -183,7 +183,7 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
                 ['junit', {
-                    outputDir: './test/results/reports/',
+                    outputDir: './test/ui/results/reports/',
                     outputFileFormat: function(options) { // optional
                         return `result-${new Date().getTime()}.xml`
                     }
